@@ -6,6 +6,8 @@ import localFont from "next/font/local";
 import { ReactNode } from "react";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const ibmPlexSans = localFont({
   src: [
@@ -43,6 +45,8 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
           <Toaster />
         </body>
       </SessionProvider>
+      <SpeedInsights />
+      <Analytics />
     </html>
   );
 };
