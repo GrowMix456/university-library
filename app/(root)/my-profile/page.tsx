@@ -13,7 +13,7 @@ const Page = () => {
 
           await signOut();
         }}
-        className="mb-10"
+        className="mb-10 flex justify-end"
       >
         <Button>Logout</Button>
       </form>
